@@ -1,16 +1,20 @@
 // Задача 1: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
 
-int Prompt(string report){     
+int Prompt(string report)
+{
     System.Console.WriteLine(report);
     string value = Console.ReadLine();
     int result = int.Parse(value);
-    if (result < 100 || result > 999){
+    if (result < 100 || result > 999)
+    {
         throw new Exception("Данное число не трехзначное");
-    } else 
+    }
+    else
         return result;
 }
-int MiddleNumberSearching( int result){      
-    int rmd = result/10 % 10;
+int MiddleNumberSearching(int result)
+{
+    int rmd = result / 10 % 10;
     return rmd;
 }
 
